@@ -62,7 +62,12 @@ public class SecurityConfig {
     public CorsConfigurationSource corsConfigurationSource() {
         CorsConfiguration configuration = new CorsConfiguration();
         // Masukkan port Frontend kalian (React/Vite)
-        configuration.setAllowedOrigins(List.of("http://localhost:3000", "http://localhost:5173"));
+configuration.setAllowedOriginPatterns(List.of(
+    "http://localhost:3000",
+    "http://localhost:5173",
+    "https://*.up.railway.app",
+    "https://*.vercel.app"
+));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
         configuration.setAllowCredentials(true);
