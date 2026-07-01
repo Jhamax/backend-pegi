@@ -65,8 +65,9 @@ public class SecurityConfig {
 configuration.setAllowedOriginPatterns(List.of(
     "http://localhost:3000",
     "http://localhost:5173",
-    "https://*.up.railway.app",
-    "https://*.vercel.app"
+    "https://*.vercel.app",
+    "https://pegi.id",
+    "https://www.pegi.id"
 ));
         configuration.setAllowedMethods(Arrays.asList("GET", "POST", "PUT", "DELETE", "OPTIONS"));
         configuration.setAllowedHeaders(List.of("*"));
