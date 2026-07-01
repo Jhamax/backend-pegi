@@ -14,7 +14,12 @@ public class CorsConfig {
             @Override
             public void addCorsMappings(CorsRegistry registry) {
             registry.addMapping("/**")
-            .allowedOriginPatterns("http://localhost:5173", "http://localhost:3000") // explicit, bukan *
+            .allowedOriginPatterns(
+    "http://localhost:5173",
+    "http://localhost:3000",
+    "https://*.up.railway.app",
+    "https://*.vercel.app"
+)
             .allowedMethods("GET", "POST", "PUT", "DELETE", "OPTIONS")
             .allowedHeaders("*")
             .allowCredentials(true);
